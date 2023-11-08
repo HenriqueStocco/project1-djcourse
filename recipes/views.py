@@ -5,9 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'pages/home.html', status=200, context={
-        'name': 'Adrian and Simon',
-    })
+    return render(request, 'pages/home.html', status=200)
 
 
 def about(request):
