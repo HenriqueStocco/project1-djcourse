@@ -34,7 +34,7 @@ class Recipe(models.Model):
     campo pode ser null, esta habilitando
     blank permite deixar sem imagem na recipe e default diz que por padrao ela nao recebe imagem'''
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL, null=True)
+        Category, on_delete=models.SET_NULL, null=True, blank=True, default=None,)
     ''' Faz relaçao com a tabela User, onde vai ser usado a propria tabela dele
     para salvar os author, seguindo a mesma logica de category, se nao exister
     ou for excluido, o campo se torna null '''
